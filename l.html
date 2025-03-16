@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-Portfolio</title>
+    <style>
+        body {
+            background-image: url('https://wallpapercave.com/wp/wp7182483.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+
+        h1 {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 10px;
+            border: 5px solid #8B0000;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 10px;
+            font-size: 16px;
+            background-color: #8B0000;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #5a0000;
+        }
+
+        table {
+            width: 95%;
+            border: 1px solid #8B0000;
+            border-spacing: 5px;
+            text-align: center;
+        }
+
+        .nav-bar td {
+            background-color: rgba(255, 255, 255, 0.5);
+            width: 10%;
+        }
+
+        .nav-bar a {
+            color: #8B0000;
+            font-size: 50px;
+            font-family: "Monotype Corsiva";
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .lesson-table {
+            width: 100%;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        .lesson-table th, .lesson-table td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+            transition: background 0.5s;
+        }
+
+        .lesson-table th {
+            background-color: cyan;
+            font-size: 20px;
+        }
+
+        .lesson-table td {
+            background-color: lightblue;
+        }
+
+        .lesson-table img {
+            width: 100%;
+            height: auto;
+            max-height: 200px;
+            object-fit: contain;
+        }
+
+        .dark-mode .lesson-table th, .dark-mode .lesson-table td {
+            background: #444;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        window.onload = function() {
+            alert("Welcome to my E-Portfolio! Hope you enjoy your visit.");
+            let audio = document.getElementById("bg-music");
+            
+            let playPromise = audio.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(() => {
+                    document.getElementById("play-music-btn").style.display = "block";
+                });
+            }
+        };
+
+        function playMusic() {
+            let audio = document.getElementById("bg-music");
+            audio.play();
+            document.getElementById("play-music-btn").style.display = "none";
+        }
+
+        function toggleTheme() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+
+     <h1 align="left" style="background-color: rgba(255, 255, 255, 0.7); padding: 10px; border: 5px solid #8B0000; display: inline-block;">
+        <font face="Monotype Corsiva" color="#8B0000" size="100">
+          E-Portfolio
+        </font>
+     </h1> <br>
+
+    <button onclick="toggleTheme()">Switch Theme</button>
+    <button id="play-music-btn" onclick="playMusic()" style="display:none;">Play Background Music</button>
+
+    <audio id="bg-music" loop>
+        <source src="OP.mp3" type="audio/mpeg">
+    </audio>
+
+    <table class="nav-bar" align="center">
+        <tr>
+            <td><a href="E-PORTFOLIO.html">Home</a></td>
+            <td><a href="am.html">About Me</a></td>
+            <td><a href="e.html">Events</a></td>
+            <td><a href="#">Lessons</a></td>
+            <td><a href="bo.html">Browser Outputs</a></td>
+            <td><a href="r.html">Reflection</a></td>
+        </tr>
+    </table>
+
+    <br><br>
+
+    <table class="lesson-table">
+        <tr>
+            <th colspan="5">Quarter 1</th>
+        </tr>
+        <tr>
+            <th>Lesson 1</th>
+            <th>Lesson 2</th>
+            <th>Lesson 3</th>
+            <th>Lesson 4</th>
+            <th>Lesson 5</th>
+        </tr>
+        <tr>
+            <td><a href="Q1L1.pdf"><img src="luffy.jpg"></a></td>
+            <td><a href="Q1L2.pdf"><img src="zoro.jpg"></a></td>
+            <td><a href="Q1L3.pdf"><img src="usopp.jpg"></a></td>
+            <td><a href="Q1L4.pdf"><img src="nami.jpg"></a></td>
+            <td><a href="Q1Lesson5.pdf"><img src="sanji.jpg"></a></td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table class="lesson-table">
+        <tr>
+            <th colspan="6">Quarter 2</th>
+        </tr>
+        <tr>
+            <th>Lesson 1 & 2</th>
+            <th>Lesson 3</th>
+            <th>Lesson 4</th>
+            <th>Lesson 5</th>
+            <th>Lesson 6</th>
+            <th>Lesson 7</th>
+        </tr>
+        <tr>
+            <td><a href="Q2L12.pdf"><img src="shanks.jpg"></a></td>
+            <td><a href="Q2L3.pdf"><img src="Ben.jpg"></a></td>
+            <td><a href="Q2L4.pdf"><img src="lucky.jpg"></a></td>
+            <td><a href="Q2L5.pdf"><img src="yassop.jpg"></a></td>
+            <td><a href="Q2L6.pdf"><img src="hongo.jpg"></a></td>
+            <td><a href="Q2L7.pdf"><img src="bonk.jpg"></a></td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table class="lesson-table">
+        <tr>
+            <th colspan="4">Quarter 4</th>
+        </tr>
+        <tr>
+            <th>Lesson 1</th>
+            <th>Lesson 2</th>
+            <th>Lesson 3</th>
+            <th>Lesson 4</th>
+        </tr>
+        <tr>
+            <td><a href="4QL1.pdf"><img src="Bb.jpg"></a></td>
+            <td><a href="4QL2.pdf"><img src="Jb.jpg"></a></td>
+            <td><a href="4QL3.pdf"><img src="Shiryu.jpg"></a></td>
+            <td><a href="4QL4.pdf"><img src="Va.jpg"></a></td>
+        </tr>
+    </table>
+</body>
+</html>
+
