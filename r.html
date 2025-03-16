@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-Portfolio</title>
+    <style>
+        body {
+            background-image: url('https://wallpapercave.com/wp/wp7182483.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+
+        .light-mode-text {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+        }
+
+        h1 {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 10px;
+            border: 5px solid #8B0000;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 10px;
+            font-size: 16px;
+            background-color: #8B0000;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #5a0000;
+        }
+
+        table {
+            width: 95%;
+            border: 1px solid #8B0000;
+            border-spacing: 5px;
+            text-align: center;
+        }
+
+        .nav-bar td {
+            background-color: rgba(255, 255, 255, 0.5);
+            width: 10%;
+        }
+
+        .nav-bar a {
+            color: #8B0000;
+            font-size: 50px;
+            font-family: "Monotype Corsiva";
+            font-weight: bold;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        window.onload = function() {
+            alert("Welcome to my E-Portfolio! Hope you enjoy your visit.");
+            let audio = document.getElementById("bg-music");
+            
+            let playPromise = audio.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(() => {
+                    document.getElementById("play-music-btn").style.display = "block";
+                });
+            }
+        };
+
+        function playMusic() {
+            let audio = document.getElementById("bg-music");
+            audio.play();
+            document.getElementById("play-music-btn").style.display = "none";
+        }
+
+        function toggleTheme() {
+            document.body.classList.toggle("dark-mode");
+            let textContainers = document.querySelectorAll(".text-box");
+            textContainers.forEach(container => {
+                container.classList.toggle("light-mode-text");
+            });
+        }
+
+        function changeImage() {
+            document.getElementById("shrekImage").src = "treasure.png";
+        }
+
+        function resetImage() {
+            document.getElementById("shrekImage").src = "shrek.jpg";
+        }
+    </script>
+
+     <h1 align="left" style="background-color: rgba(255, 255, 255, 0.7); padding: 10px; border: 5px solid #8B0000; display: inline-block;">
+        <font face="Monotype Corsiva" color="#8B0000" size="100">
+          E-Portfolio
+        </font>
+     </h1> <br>
+
+
+    <button onclick="toggleTheme()">Switch Theme</button>
+    <button id="play-music-btn" onclick="playMusic()" style="display:none;">Play Background Music</button>
+
+    <audio id="bg-music" loop>
+        <source src="Ishaisalive.mp3" type="audio/mpeg">
+    </audio>
+
+    <table class="nav-bar" align="center">
+        <tr>
+            <td><a href="E-PORTFOLIO.html">Home</a></td>
+            <td><a href="am.html">About Me</a></td>
+            <td><a href="e.html">Events</a></td>
+            <td><a href="l.html">Lessons</a></td>
+            <td><a href="bo.html">Browser Outputs</a></td>
+            <td><a href="#">Reflection</a></td>
+        </tr>
+    </table>
+
+    <br><br>
+
+    <table align="center" width="70%" border="0" cellpadding="10" cellspacing="0">
+        <tr>
+            <th bgcolor="cyan" colspan="2"><font size="5">Reflection</font></th>
+        </tr>
+        <tr>
+            <td align="center" width="10%" bgcolor="lightblue">
+                <img id="shrekImage" src="shrek.jpg" alt="shrek" style="width:100%; height:85%;"
+                     onmouseover="changeImage()" onmouseout="resetImage()">
+                <br>The One Piece is Shrek all along..
+            </td>
+            <td align="left" width="50%" bgcolor="lightblue">
+                <div class="text-box">
+                    <font size="5">
+                        The 1st Quarter of ICT was a rough trip full of ups and downs, which might have made it enjoyable and terrible for me. Coding is quite fun when you fully understand it but I failed many activities in this subject. I've had many technical problems with my laptop during hands-on and I doubt I would get a high grade in ICT but that doesn't bother me that much considering that it's still 1st Quarter and there are still so many things to explore and discover. I prefer to be optimistic because you never know what good things can happen to you in the future, I'm getting out of topic so let me get back to the main topic. These lessons can serve as the foundation for more complex codes and I'm excited to apply what I learn in future activities. <br><br>
+
+                        2nd Quarter was a confusing trip at first but became quite easy after some time. We were finally exposed to an undiscovered treasure called CSS, a feature that gives a pirate like me powers to design my browser to be visually appealing and user friendly. In web development, it emphasizes the value of structure, style, and flexibility. CSS has shown me how minor changes like changing the colors or margins of the content may have a big influence on the user experience. It also shortens html codes which saves a lot of my time in making web browsers like this E-Portfolio and stressful performance tasks done in school. It has also highlighted the need of perseverance and trial and error because debugging and fixing styles frequently call for creative thinking and problem-solving skills. In general, CSS develops not only technical proficiency but also creativity and attention to detail, two qualities that are essential for creating engaging digital experiences. <br><br>
+
+                        4th Quarter was by far the hardest quarter. Javascript is case-sensitive so one singular mistake can result my web browser to fail but it also gave way for more dynamic presentations. This quarter was so annoying because most of the times, I wouldn't even know where my code got wrong. That's why I was so happy when my code worked in my Performance Task, it felt like I found the One Piece. Despite being annoying for its case-sensitivity, the satisfaction of your code working was sometimes be addicting, similar to working as a pirate! This quarter improved my problem-solving skills, perseverance, patience, and discipline. When my code doesn't work after so many tries, I felt like I wanted to give up, but I kept going to accomplish my duty as a student. This quarter or subject developed not only my skills in coding but also my character. I might continue in coding until I found the ultimate treasure of satisfaction. Thank you for giving me the opportunity to grow my skills and character. Wish me good luck in finding the One Piece!<br><br>
+
+                        <a href="Form.html" target="_self">Now tell me your journey in ICT! Was it easy? Was it fun? I want to know!</a>
+                    </font>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
